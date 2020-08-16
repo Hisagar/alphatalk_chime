@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="172d5c4d-e408-4658-9e77-f60a87c98eaa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.packages" beforeDir="false" afterPath="$PROJECT_DIR$/.packages" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/example/alphatalkchime/AlphatalkchimePlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/example/alphatalkchime/AlphatalkchimePlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/example/alphatalkchime/activity/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/example/alphatalkchime/activity/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/example/alphatalkchime/activity/MeetingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/example/alphatalkchime/activity/MeetingActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/kotlin/com/example/alphatalkchime/fragment/MeetingFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/kotlin/com/example/alphatalkchime/fragment/MeetingFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/src/main/res/layout/activity_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/libs/amazon-chime-sdk-media.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/android/app/libs/amazon-chime-sdk.aar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/alphatalkchime.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/alphatalkchime.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,33 +77,33 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1218" height="166" key="GridCell.Tab.0.bottom" timestamp="1597576232129">
-      <screen x="0" y="23" width="1280" height="724" />
+    <state width="1218" height="166" key="GridCell.Tab.0.bottom" timestamp="1597597790569">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.716@0.23.1280.716" timestamp="1597574172525" />
-    <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.721@0.23.1280.721" timestamp="1597574814844" />
-    <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1597575114412" />
+    <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.721@0.23.1280.721" timestamp="1597585177471" />
+    <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.723@0.23.1280.723" timestamp="1597597790569" />
     <state width="1218" height="166" key="GridCell.Tab.0.bottom/0.23.1280.724@0.23.1280.724" timestamp="1597576232129" />
-    <state width="1218" height="166" key="GridCell.Tab.0.center" timestamp="1597576232128">
-      <screen x="0" y="23" width="1280" height="724" />
+    <state width="1218" height="166" key="GridCell.Tab.0.center" timestamp="1597597790569">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.716@0.23.1280.716" timestamp="1597574172524" />
-    <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.721@0.23.1280.721" timestamp="1597574814843" />
-    <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1597575114412" />
+    <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.721@0.23.1280.721" timestamp="1597585177470" />
+    <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.723@0.23.1280.723" timestamp="1597597790569" />
     <state width="1218" height="166" key="GridCell.Tab.0.center/0.23.1280.724@0.23.1280.724" timestamp="1597576232128" />
-    <state width="1218" height="166" key="GridCell.Tab.0.left" timestamp="1597576232127">
-      <screen x="0" y="23" width="1280" height="724" />
+    <state width="1218" height="166" key="GridCell.Tab.0.left" timestamp="1597597790567">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.716@0.23.1280.716" timestamp="1597574172522" />
-    <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.721@0.23.1280.721" timestamp="1597574814843" />
-    <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1597575114411" />
+    <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.721@0.23.1280.721" timestamp="1597585177470" />
+    <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.723@0.23.1280.723" timestamp="1597597790567" />
     <state width="1218" height="166" key="GridCell.Tab.0.left/0.23.1280.724@0.23.1280.724" timestamp="1597576232127" />
-    <state width="1218" height="166" key="GridCell.Tab.0.right" timestamp="1597576232128">
-      <screen x="0" y="23" width="1280" height="724" />
+    <state width="1218" height="166" key="GridCell.Tab.0.right" timestamp="1597597790569">
+      <screen x="0" y="23" width="1280" height="723" />
     </state>
     <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.716@0.23.1280.716" timestamp="1597574172525" />
-    <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.721@0.23.1280.721" timestamp="1597574814844" />
-    <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1597575114412" />
+    <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.721@0.23.1280.721" timestamp="1597585177471" />
+    <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.723@0.23.1280.723" timestamp="1597597790569" />
     <state width="1218" height="166" key="GridCell.Tab.0.right/0.23.1280.724@0.23.1280.724" timestamp="1597576232128" />
     <state x="289" y="216" key="com.intellij.ide.util.TipDialog" timestamp="1597573898049">
       <screen x="0" y="23" width="1280" height="716" />

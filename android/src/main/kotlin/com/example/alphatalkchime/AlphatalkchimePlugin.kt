@@ -55,11 +55,13 @@ public class AlphatalkchimePlugin: FlutterPlugin, MethodCallHandler, ActivityAwa
     }else if(call.method == "startVideoCall"){
       val meetId= call.argument<String>("meetId");
       val userName= call.argument<String>("userName");
+      val serverlessUrl= call.argument<String>("serverlessUrl");
       val isVideoCall= call.argument<Boolean>("isVideoCall");
       val intent = Intent(context, HomeActivity::class.java)
       intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
       intent.putExtra("meetId",meetId);
       intent.putExtra("userName",userName);
+      intent.putExtra("serverlessUrl",serverlessUrl);
       intent.putExtra("isVideoCall",isVideoCall);
       context.startActivity(intent)
     } else {

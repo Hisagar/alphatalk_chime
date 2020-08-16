@@ -23,6 +23,7 @@ import com.example.alphatalkchime.fragment.DeviceManagementFragment
 import com.example.alphatalkchime.fragment.MeetingFragment
 import com.example.alphatalkchime.model.MeetingSessionModel
 import com.google.gson.Gson
+import kotlin.properties.Delegates
 
 class MeetingActivity : AppCompatActivity(),
     DeviceManagementFragment.DeviceManagementEventListener,
@@ -33,6 +34,7 @@ class MeetingActivity : AppCompatActivity(),
     private val meetingSessionModel: MeetingSessionModel by lazy { ViewModelProvider(this)[MeetingSessionModel::class.java] }
     private lateinit var meetingId: String
     private lateinit var name: String
+    private var isVideoCall by Delegates.notNull<Boolean>()
 
     private val TAG = "InMeetingActivity"
 
@@ -40,8 +42,8 @@ class MeetingActivity : AppCompatActivity(),
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meeting)
         meetingId = intent.getStringExtra(HomeActivity.MEETING_ID_KEY) as String
-        name = intent.getStringExtra(HomeActivity.NAME_KEY) as String
-
+        isVideoCall = intent.getBooleanExtra(HomeActivity.ISVIDEON_KEY,false)
+        name = intent.getStringExtra("userName") as String
         if (savedInstanceState == null) {
             val meetingResponseJson =
                 intent.getStringExtra(HomeActivity.MEETING_RESPONSE_KEY) as String
@@ -75,7 +77,7 @@ class MeetingActivity : AppCompatActivity(),
     }
 
     override fun onJoinMeetingClicked() {
-        val rosterViewFragment = MeetingFragment.newInstance(meetingId)
+        val rosterViewFragment = MeetingFragment.newInstance(meetingId,isVideoCall)
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.root_layout, rosterViewFragment, "rosterViewFragment")

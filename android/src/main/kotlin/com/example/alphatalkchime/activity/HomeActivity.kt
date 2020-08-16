@@ -48,31 +48,40 @@ class HomeActivity : AppCompatActivity() {
         Manifest.permission.RECORD_AUDIO
     )
 
-    private var meetingEditText: EditText? = null
-    private var nameEditText: EditText? = null
+//    private var meetingEditText: EditText? = null
+//    private var nameEditText: EditText? = null
     private var authenticationProgressBar: ProgressBar? = null
     private var meetingID: String? = null
     private var yourName: String? = null
+    private var serverlessUrl: String = ""
+    private var isVideoCall: Boolean? = false
+
 
     companion object {
         const val MEETING_RESPONSE_KEY = "MEETING_RESPONSE"
         const val MEETING_ID_KEY = "MEETING_ID"
         const val NAME_KEY = "NAME"
+        const val ISVIDEON_KEY = "NAME"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        meetingEditText = findViewById(R.id.editMeetingId)
-        nameEditText = findViewById(R.id.editName)
+//        meetingEditText = findViewById(R.id.editMeetingId)
+//        nameEditText = findViewById(R.id.editName)
         authenticationProgressBar = findViewById(R.id.progressAuthentication)
 
-        findViewById<ImageButton>(R.id.buttonContinue)?.setOnClickListener { joinMeeting() }
+        //findViewById<ImageButton>(R.id.buttonContinue)?.setOnClickListener { joinMeeting() }
 
         val versionText: TextView = findViewById(R.id.versionText) as TextView
         versionText.text = "${getString(R.string.version_prefix)}${Versioning.sdkVersion()}"
+        meetingID=intent.getStringExtra("meetId");
+        yourName=intent.getStringExtra("userName");
+        serverlessUrl=intent.getStringExtra("serverlessUrl");
+        isVideoCall=intent.getBooleanExtra("isVideoCall",false);
 
+        authenticate(serverlessUrl, meetingID, yourName)
     }
 
     private fun showToast(context: Context, msg: String) {
@@ -83,22 +92,22 @@ class HomeActivity : AppCompatActivity() {
         ).show()
     }
 
-    private fun joinMeeting() {
-        meetingID = meetingEditText?.text.toString().trim().replace("\\s+".toRegex(), "+")
-        yourName = nameEditText?.text.toString().trim().replace("\\s+".toRegex(), "+")
-
-        if (meetingID.isNullOrBlank()) {
-            showToast(this, getString(R.string.user_notification_meeting_id_invalid))
-        } else if (yourName.isNullOrBlank()) {
-            showToast(this, getString(R.string.user_notification_attendee_name_invalid))
-        } else {
-            if (hasPermissionsAlready()) {
-                authenticate(getString(R.string.test_url), meetingID, yourName)
-            } else {
-                ActivityCompat.requestPermissions(this, WEBRTC_PERM, WEBRTC_PERMISSION_REQUEST_CODE)
-            }
-        }
-    }
+//    private fun joinMeeting() {
+//        meetingID = meetingEditText?.text.toString().trim().replace("\\s+".toRegex(), "+")
+//        yourName = nameEditText?.text.toString().trim().replace("\\s+".toRegex(), "+")
+//
+//        if (meetingID.isNullOrBlank()) {
+//            showToast(this, getString(R.string.user_notification_meeting_id_invalid))
+//        } else if (yourName.isNullOrBlank()) {
+//            showToast(this, getString(R.string.user_notification_attendee_name_invalid))
+//        } else {
+//            if (hasPermissionsAlready()) {
+//                authenticate(getString(R.string.test_url), meetingID, yourName)
+//            } else {
+//                ActivityCompat.requestPermissions(this, WEBRTC_PERM, WEBRTC_PERMISSION_REQUEST_CODE)
+//            }
+//        }
+//    }
 
     private fun hasPermissionsAlready(): Boolean {
         return WEBRTC_PERM.all {
@@ -150,6 +159,8 @@ class HomeActivity : AppCompatActivity() {
                     intent.putExtra(MEETING_RESPONSE_KEY, meetingResponseJson)
                     intent.putExtra(MEETING_ID_KEY, meetingId)
                     intent.putExtra(NAME_KEY, attendeeName)
+                    intent.putExtra("userName",attendeeName);
+                    intent.putExtra(ISVIDEON_KEY, isVideoCall)
                     startActivity(intent)
                 }
             }

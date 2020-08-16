@@ -127,11 +127,11 @@ class MeetingFragment : Fragment(),
     private lateinit var tabLayout: TabLayout
 
     companion object {
-        fun newInstance(meetingId: String): MeetingFragment {
+        fun newInstance(meetingId: String,isVideoCallOn: Boolean): MeetingFragment {
             val fragment = MeetingFragment()
 
             fragment.arguments =
-                Bundle().apply { putString(HomeActivity.MEETING_ID_KEY, meetingId) }
+                Bundle().apply { putString(HomeActivity.MEETING_ID_KEY, meetingId);putBoolean(HomeActivity.ISVIDEON_KEY, isVideoCallOn)  }
             return fragment
         }
     }
@@ -177,6 +177,9 @@ class MeetingFragment : Fragment(),
         subscribeToAttendeeChangeHandlers()
         audioVideo.start()
         audioVideo.startRemoteVideo()
+        if(arguments?.getBoolean(HomeActivity.ISVIDEON_KEY)==true){
+            toggleVideo()
+        }
         return view
     }
 
