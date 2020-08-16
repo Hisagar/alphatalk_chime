@@ -4,9 +4,11 @@ packages:
   alphatalkchime:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "75ee97eeafa2b87b27b2427d8f546f4de59d78e1"
+      url: "https://github.com/Hisagar/alphatalk_chime.git"
+    source: git
     version: "0.0.1"
   archive:
     dependency: transitive

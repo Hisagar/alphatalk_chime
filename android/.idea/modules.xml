@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/alphatalkchime.iml" filepath="$PROJECT_DIR$/.idea/modules/alphatalkchime.iml" group="alphatalkchime" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.alphatalkchime-alphatalkchime.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.alphatalkchime-alphatalkchime.iml" group="alphatalkchime" />
     </modules>
   </component>
 </project>
